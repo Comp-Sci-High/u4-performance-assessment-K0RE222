@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
 
-const profile = {
-       name: "Alex Carter", 
-       inventory: ["flashlight", "notebook", "rusty key", "map"],
+const profile = { 
+       name: "Alex Carter",
+       inventory: ["flashlight", " notebook", " rusty key", " map"],
        role: "Detective",
        health: 100,
        stamina: 80,
@@ -64,8 +64,8 @@ const randomEvents = [
         turmoil: { type: "paranoia", effect: "Player hears random noises, making them second-guess surroundings." }
     }
 ]
-
-   
+let randomInt = Math.floor(Math.random() * room.length)
+let randomRoom = room[randomInt] 
 
 
    app.use((req, res, next) => {
@@ -80,9 +80,18 @@ app.get("/", (req,res) => {
     res.sendFile(__dirname + "/public/home.html")
 })
 
-
-
-
+app.get("/docs", (req,res) =>{
+    const data = randomRoom
+    res.render("overview.ejs", data)
+})
+app.get("/profile", (req,res) => {
+    const data = profile
+    res.render("profile.ejs", data)
+})
+app.get("/room", (req, res)=>{
+    const data = room
+    res.render("specific.ejs", data)
+})
 
 
 
