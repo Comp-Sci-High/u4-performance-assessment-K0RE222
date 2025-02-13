@@ -10,29 +10,27 @@
 <body>
 
 
-
-    <button id="notebookEntry" onclick="showAlert()">Show Notebook Entry</button>
-
-    <div id="customAlert" class="alert-box">
-        <p>"As I stepped inside, a chilling wind swept past me. The walls bore strange carvings, and a faint whisper echoed through the air..."</p>
-
-        <button onclick="closeAlert()">Done</button>
-    </div>
-
-
     <div class="container">
-        <h1>Room Name: Forgotten Chamber</h1>
+       
+        <h1>Room Name: <%= name %></h1>
         <div class="info-box">
             <h2>Event Description</h2>
-            <p>A mysterious book falls off the shelf, revealing a hidden compartment behind it.</p>
+            <p><%= event %></p>
         </div>
-        <div class="info-box">
-            <h2>Key Spawn Location</h2>
-            <p>Inside the hollowed-out section of the ancient desk.</p>
-        </div>
+       
         <div class="info-box">
             <h2>Turmoil</h2>
-            <p>Psychological Distress - The player experiences distorted visions for a short period.</p>
+            <p><%= turmoilEffect %></p>
+            <p>Player has: <%= turmoilType %></p>
+
+
+        </div>
+
+        <div class="info-box">
+            <h2>"You look around for the key you need"</h2>
+            <button class="custom-button redirectNext"><%= keySpawnLocation%></button>
+            <button class="custom-button redirectDead"><%= falseKeySpawnLocation%></button>
+
         </div>
     </div>
  <a href="/">Go to home(this will restart your data)</a>

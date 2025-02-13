@@ -161,3 +161,26 @@ button:hover {
 .alert-box button:hover {
     background-color: #e6b800;
 }
+
+
+/* sec 6 */
+.custom-button {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.custom-button:hover {
+    background-color: #ffffff;
+    color: #1f1f1f;
+}
+
+.custom-button:active {
+    transform: scale(0.95);
+}

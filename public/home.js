@@ -1,11 +1,21 @@
+function showAlert() {
+    document.getElementById("customAlert").style.display = "block";
+}
 
-let button = document.getElementById("notebookEntry")
-let alert = document.getElementById("customAlert")
+function closeAlert() {
+    document.getElementById("customAlert").style.display = "none";
+}
 
-button.addEventListener('click', function(){
-    console.log("clicked")
-    alert.
-})
+
+let redirectDead = document.getElementsByClassName("redirectDead")
+let redirectNext = document.getElementsByClassName("redirectNext")
+redirectNext.addEventListener("click", function() {
+    window.location.href = "dead.html";
+}
+
+redirectDead.addEventListener("click", function() {
+    window.location.href = "dead.html";
+}
 
 
 
